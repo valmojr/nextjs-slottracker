@@ -1,10 +1,12 @@
-import { LoggedUserProvider } from './Context/Context';
-import MainPage from './Main/page';
+import Link from "next/link";
 
-const Home = () => (
-	<LoggedUserProvider value={null}>
-		<MainPage />
-	</LoggedUserProvider>
-);
+export default function Page() {
 
-export default Home;
+  return <main className="">
+      <button>
+        <Link href="/Main">
+          Main
+        </Link>
+      </button>
+    </main>
+};
