@@ -42,7 +42,7 @@ export const randomEvents: Event[] = [
 		ownerId: '272187905240203266',
 	},
 ];
-// create 2 groups that are related to the event 1, and 3 groups that are related to the event 2, they are all groups in a arma 3 operation as example
+
 export const randomGroups: Group[] = [
 	{
 		id: '1',
@@ -70,11 +70,7 @@ export const randomGroups: Group[] = [
 		eventId: '2',
 	},
 ];
-// now create the roles, remember that the roles are related to the groups, so the first 2 roles are related to the first group of the event 1, and the last 3 roles are related to the last 3 groups of the event 2, and its all related to a arma 3 operation as example
 export const randomRoles: Role[] = [
-	// transform the id to be uuid generated with 12 random characters
-	// q: why cant you generated a hash with 12 caracters?
-
 	{
 		id: '1qwdqw',
 		name: 'Group Leader',
