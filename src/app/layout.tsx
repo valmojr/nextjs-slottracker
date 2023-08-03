@@ -16,11 +16,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html
-			lang="en"
-			className="flex max-h-screen flex-col items-center justify-start p-24"
-		>
-			<body className={inter.className}>{children}</body>
+		<html lang="en" className="flex max-h-screen flex-col items-center justify-start p-24">
+			<body className={inter.className}>
+				{children}
+			</body>
 		</html>
 	);
 }
