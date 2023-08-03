@@ -1,11 +1,13 @@
 import Link from 'next/link';
-
+import { DiscordLogoIcon } from '@radix-ui/react-icons';
 export default function Page() {
 	return (
 		<main className="">
-			<button className=" bg-slate-400">
-				<Link href="/Main">Main</Link>
-			</button>
+			<Link href="/Main"><button className="flex flex-row flex-nowrap bg-red-400">
+				<DiscordLogoIcon/>
+				Main
+				</button>
+			</Link>
 		</main>
 	);
 }
