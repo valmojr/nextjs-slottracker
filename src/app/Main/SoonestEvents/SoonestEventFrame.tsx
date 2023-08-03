@@ -7,9 +7,9 @@ export default function SoonestEventFrame() {
 
 	return (
 		<div className="aspect-video bg-red-500">
-			<h1 className="">Cooming Soon</h1>
-			{assignedEventInOrderOfDate.map((event) => (
-				<EventFrame key={0} event={event} />
+			<h1 className="">Coming Soon</h1>
+			{assignedEventInOrderOfDate.map((event, index) => (
+				<EventFrame key={index} event={event} />
 			))}
 		</div>
 	);
