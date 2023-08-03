@@ -1,13 +1,13 @@
 import { User, Event, Group, Role } from './types';
 
-export const loggedUser: User = {
+export const loggedUserExample: User = {
 	id: '272187905240203266',
 	username: 'valmo',
 	avatar: 'd1a29185016efba4946c004108c9fc35',
 };
 
-export const randomUsers: User[] = [
-	loggedUser,
+export const randomUsersExample: User[] = [
+	loggedUserExample,
 	{
 		id: '258018732364922880',
 		username: 'ludwigdemba',
@@ -20,7 +20,7 @@ export const randomUsers: User[] = [
 	},
 ];
 
-export const randomEvents: Event[] = [
+export const randomEventsExample: Event[] = [
 	{
 		id: '1',
 		title: 'Event 1',
@@ -43,7 +43,7 @@ export const randomEvents: Event[] = [
 	},
 ];
 
-export const randomGroups: Group[] = [
+export const randomGroupsExample: Group[] = [
 	{
 		id: '1',
 		name: 'Group 1',
@@ -70,7 +70,7 @@ export const randomGroups: Group[] = [
 		eventId: '2',
 	},
 ];
-export const randomRoles: Role[] = [
+export const randomRolesExample: Role[] = [
 	{
 		id: '1qwdqw',
 		name: 'Group Leader',

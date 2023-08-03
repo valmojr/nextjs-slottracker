@@ -1,12 +1,11 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Page() {
-
-  return <main className="">
-      <button>
-        <Link href="/Main">
-          Main
-        </Link>
-      </button>
-    </main>
-};
+	return (
+		<main className="">
+			<button className=" bg-slate-400">
+				<Link href="/Main">Main</Link>
+			</button>
+		</main>
+	);
+}
