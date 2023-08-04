@@ -13,7 +13,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        blurple: "5865F2",
+        Blurple: "5865F2",
         Green: "57F287",
         Yellow: "FEE75C",
         Fuchsia: "EB459E",
