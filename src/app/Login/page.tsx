@@ -4,22 +4,18 @@ import DiscordButton from '../Components/Buttons/DiscordButton';
 import Image from 'next/image';
 
 export default function LoginPage() {
-	const isLogged = false;
+  const isLogged = undefined;
 
-	return (
-		<div>
-			<div className="h-screen w-screen bg-slate-400" />
-			<section className="flex flex-row items-center justify-center bg-slate-800 w-screen h-28">
-				<Link href="/Main">
-					<DiscordButton className="" success={isLogged}>
-						<Image
-							src={DiscordLogoIcon}
-							alt={'Discord Logo'}
-							height={28}
-						/>
-					</DiscordButton>
-				</Link>
-			</section>
-		</div>
-	);
+  return (
+    <>
+      <div className="bg-DarkLightest w-screen h-screen" />
+      <div className="flex flex-row items-center justify-center bg-DarkDarkest w-screen h-28">
+        <Link href="/Main">
+          <DiscordButton className="" success={isLogged}>
+            <Image src={DiscordLogoIcon} alt={'Discord Logo'} height={28} />
+          </DiscordButton>
+        </Link>
+      </div>
+    </>
+  );
 }
