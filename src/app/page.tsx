@@ -4,11 +4,11 @@ import DiscordButton from './Components/Buttons/DiscordButton';
 import Image from 'next/image';
 
 export default function Page() {
-	const isLogged = false;
+  const isLogged = false;
 
-	return (
-		<main className="">
-			<h1>Inicial</h1>
-		</main>
-	);
+  return (
+    <main className="">
+      <h1>Inicial</h1>
+    </main>
+  );
 }
