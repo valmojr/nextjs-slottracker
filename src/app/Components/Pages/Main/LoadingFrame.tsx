@@ -8,6 +8,7 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
+      duration: 0.5,
       delayChildren: 1,
       staggerChildren: 1,
     },
@@ -35,7 +36,7 @@ export function LoadingItem() {
   );
 }
 
-export default function LoadingFrame(props: ComponentProps<'button'>) {
+export default function LoadingFrame() {
   return (
     <motion.div
       variants={container}
