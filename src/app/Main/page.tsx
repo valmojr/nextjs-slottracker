@@ -1,7 +1,6 @@
 import { loggedUserExample } from '../Util/loremipsum';
 import { Event } from '../Util/types';
 import AvaliableEventsFrame from './AvaliableEvents/AvaliableEventsFrame';
-import BottomButton from './Bottom Menu/BottomButton';
 import BottonMenuFrame from './Bottom Menu/BottomMenuFrame';
 import SoonestEventFrame from './SoonestEvents/SoonestEventFrame';
 

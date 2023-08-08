@@ -1,7 +1,7 @@
 export default function AvaliableEventsFrame() {
   return (
-    <div className="bg-DarkLightest">
-      <h1>Avaliable Events</h1>
+    <div className="aspect-video rounded-xl bg-DarkDarken shadow-lg shadow-black flex flex-row justify-center items-center">
+      <h1>2</h1>
     </div>
   );
 }
