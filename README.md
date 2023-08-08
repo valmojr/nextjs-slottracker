@@ -9,10 +9,13 @@ This is a [Next.js](https://github.com/vercel/next.js) application for handling 
 ## Tools used
 
 <p>
-    <a href="https://www.javascript.com/">
+    <a href="https://www.figma.com/">
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+    </a>
+    <a href="https://developer.mozilla.org/docs/Learn/HTML">
       <img width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original.svg" alt="HTML5"/>
     </a>
-    <a href="https://www.javascript.com/">
+    <a href="https://developer.mozilla.org/docs/Learn/CSS">
       <img width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-plain.svg" alt="CSS3"/>
     </a>
     <a href="https://www.javascript.com/">
@@ -27,13 +30,13 @@ This is a [Next.js](https://github.com/vercel/next.js) application for handling 
     <a href="https://www.npmjs.com/">
       <img width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/npm/npm-original-wordmark.svg" />
     </a>
-    <a>
+    <a href="https://react.dev/">
         <img width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/react/react-original.svg" />
     </a>
-    <a>
+    <a href="https://nextjs.org/">
         <img width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/nextjs/nextjs-original.svg" />
     </a>
-    <a>
+    <a href="https://tailwindcss.com/">
         <img width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tailwindcss/tailwindcss-plain.svg" />
     </a>
     <a href="https://jestjs.io/">
@@ -44,9 +47,6 @@ This is a [Next.js](https://github.com/vercel/next.js) application for handling 
     </a>
     <a href="https://github.com/">
       <img width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/>
-    </a>
-    <a href="https://www.figma.com/">
-      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
     </a>
 </p>
 
