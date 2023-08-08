@@ -1,6 +1,7 @@
+'use client';
 import DiscordLogoIcon from '../../../public/discord_logo_white.png';
 import Link from 'next/link';
-import DiscordButton from '../Components/Buttons/DiscordButton';
+import DiscordButton from '../Components/util/Buttons/DiscordButton';
 import Image from 'next/image';
 
 export default function LoginPage() {

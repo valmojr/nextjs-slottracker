@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="flex max-h-screen h-screen flex-col items-end justify-end p-0 overflow-hidden"
+      className="flex max-h-screen h-screen flex-col items-center justify-center p-0 overflow-hidden"
     >
       <body className={inter.className}>{children}</body>
     </html>
