@@ -8,7 +8,7 @@ export default function LoginPage() {
   const isLogged = undefined;
 
   return (
-    <>
+    <div className="flex max-h-screen h-screen flex-col items-center justify-end p-0 overflow-hidden">
       <div className="bg-DarkLightest w-screen h-screen" />
       <div className="flex flex-row items-center justify-center bg-DarkDarkest w-screen h-28">
         <Link href="/Main">
@@ -17,6 +17,6 @@ export default function LoginPage() {
           </DiscordButton>
         </Link>
       </div>
-    </>
+    </div>
   );
 }
