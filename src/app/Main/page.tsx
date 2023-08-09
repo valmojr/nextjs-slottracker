@@ -1,12 +1,12 @@
-import { loggedUserExample } from '../Util/loremipsum';
+import * as examples from '../Util/loremipsum';
 import { Event } from '../Util/types';
 import AvaliableEventsFrame from './AvaliableEvents/AvaliableEventsFrame';
 import BottonMenuFrame from './Bottom Menu/BottomMenuFrame';
 import SoonestEventFrame from './SoonestEvents/SoonestEventFrame';
 
 export default function MainPage() {
-  const userInfo = loggedUserExample;
-  const userAssignedEvents: Event[] = [];
+  const userInfo = examples.loggedUserExample;
+  const userAssignedEvents: Event[] = examples.randomEventsExample;
   const userCreatedEvents: Event[] = [];
   const avaliableEvents: Event[] = [];
 
