@@ -38,4 +38,4 @@ package-lock.json
 
 .env
 
-src\styles
+src/styles/tailwind.css
