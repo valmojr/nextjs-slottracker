@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ComponentProps } from 'react';
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
