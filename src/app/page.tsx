@@ -1,11 +1,9 @@
-import LoadingFrame from './Components/Pages/Main/LoadingFrame';
+import LoginHandler from './LoginHandler';
 
 export default function Page() {
-  const isLogged = false;
-
   return (
     <>
-      <LoadingFrame />
+      <LoginHandler />
     </>
   );
 }
