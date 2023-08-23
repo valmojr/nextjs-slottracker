@@ -1,4 +1,4 @@
-import { User, Event, Group, Role } from './types';
+import { User, Event, Group, Role } from './types/entity';
 
 export const loggedUserExample: User = {
   id: '272187905240203266',
