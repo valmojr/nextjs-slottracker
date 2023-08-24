@@ -1,23 +1,33 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function LoginHandler() {
-  const [profile, setProfile] = useState();
   const router = useRouter();
 
   useEffect(() => {
     async function fetchProfile() {
-      router.push('http://localhost:8080/api/auth/login');
+      router.push(`${process.env.BACKEND_API_URL}/auth/login`);
     }
 
-    function logout() {
-      localStorage.removeItem('token');
-      router.push('/');
+    let cookies = document.cookie;
+
+    let cookieArray = cookies.split(';');
+    let connectSidValue = null;
+    for (let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i].trim();
+      if (cookie.indexOf('connect.sid=') === 0) {
+        connectSidValue = cookie.substring(
+          'connect.sid='.length,
+          cookie.length,
+        );
+
+        break;
+      }
     }
 
-    fetchProfile();
+    connectSidValue ? router.push('/signin') : fetchProfile();
   }, [router]);
 
   return <></>;
