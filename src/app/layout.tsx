@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import ProfileProvider from './context/Context';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -18,7 +19,9 @@ export default function RootLayout({
       lang="en"
       className="flex max-h-screen h-screen flex-col items-center justify-center p-0 overflow-hidden"
     >
-      <body className={inter.className}>{children}</body>
+      <ProfileProvider>
+        <body className={inter.className}>{children}</body>
+      </ProfileProvider>
     </html>
   );
 }

@@ -1,35 +1,36 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { redirect } from 'next/navigation';
 import { User } from '../Util/types/entity';
 import CookieHandler from '../Util/functions/cookieHandler';
 import { useRouter } from 'next/navigation';
 import fetchProfile from '../Util/functions/fetchProfile';
 import LoadingFrame from '../Util/Components/Loading';
+import { ProfileContext, ProfileContextProps } from '../context/Context';
 
 export default function SignInPage() {
-  const [sid, setSID] = useState<string>();
-  const [profile, setProfile] = useState<User>();
   const router = useRouter();
 
+  const { login } = useContext(ProfileContext) as ProfileContextProps;
+
   useEffect(() => {
-    const connectSidValue = CookieHandler(document.cookie, setSID);
+    const connectSidValue = CookieHandler(document.cookie);
 
     if (!connectSidValue) {
       redirect('/');
     } else {
-      fetchProfile(connectSidValue).then((fetchedProfile) => {
-        setProfile(fetchedProfile);
+      fetchProfile(connectSidValue).then((profile) => {
+        login(profile);
 
         router.push('/dashboard');
       });
     }
-  }, [sid, router]);
+  }, [router, login]);
 
   return (
     <div className="flex flex-col flex-nowrap justify-center items-center">
-      <h2>{sid ? `` : <LoadingFrame />}</h2>
+      <LoadingFrame />
     </div>
   );
 }
