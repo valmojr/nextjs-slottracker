@@ -11,10 +11,10 @@ export default function Avatar({
   return (
     <Image
       className={twMerge(className, 'rounded-full h-18 w-18')}
-      alt={``}
+      alt={`${profile.username}'s avatar`}
       src={AvatarHandler(profile)}
-      width={'80'}
-      height={'80'}
+      width={'60'}
+      height={'60'}
     />
   );
 }
