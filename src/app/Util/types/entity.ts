@@ -31,6 +31,13 @@ export type User = {
   refreshToken?: string;
 };
 
+export type Guild = {
+  id: string;
+  name: string;
+  icon: string;
+  description?: string;
+};
+
 export type Session = {
   id: string;
   expiredAt: string;
