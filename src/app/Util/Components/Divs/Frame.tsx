@@ -4,8 +4,6 @@ import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
 import { Blurple, Fuchsia, Green, Red } from '../../JSONs/colors';
 
-const framevariants = {};
-
 const frameoptions = tv({
   base: 'h-24 w-screen flex flex-col flex-nowrap align-center items-center',
   variants: {

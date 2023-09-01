@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
@@ -27,26 +26,10 @@ const div = tv({
 export default function BackgroundDiv({
   children,
   className,
-  backgroundColor,
-}: ComponentProps<'div'> & { backgroundColor?: string }) {
-  if (!backgroundColor) {
-    backgroundColor = '#000';
-  }
-
+}: ComponentProps<'div'>) {
   return (
-    <motion.div
-      initial={{
-        backgroundColor: '#000',
-      }}
-      animate={{
-        backgroundColor,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      className={twMerge(div({ size: 'fullscreen' }), className)}
-    >
+    <div className={twMerge(div({ size: 'fullscreen' }), className)}>
       {children}
-    </motion.div>
+    </div>
   );
 }
