@@ -29,15 +29,13 @@ export default function ProfileProvider({ children }: ProfileProviderProps) {
   }
 
   function logout() {
-    setProfile(undefined);
-
     document.cookie.split(';').forEach((c) => {
       document.cookie = c
         .replace(/^ +/, '')
         .replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/');
     });
-
     router.push('/');
+    setProfile(undefined);
   }
 
   return (
