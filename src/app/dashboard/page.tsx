@@ -1,11 +1,11 @@
 'use client';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, Suspense } from 'react';
 import { ProfileContext, ProfileContextProps } from '../context/Context';
 import { useRouter } from 'next/navigation';
-import BackgroundDiv from '../Util/Components/Divs/BackgroundDiv';
-import Frame from '../Util/Components/Divs/Frame';
-import Avatar from '../Util/Components/Images/Avatar';
-import { User } from '../Util/types/entity';
+import AssignedEvents from './DashboardFrame/AssignedEvents/AssignedEvents';
+import AvaliableEvents from './DashboardFrame/AvaliableEvent/AvaliableEvent';
+import LoadingAssignedEvents from './DashboardFrame/AssignedEvents/LoadingAssignedEvents';
+import LoadingAvaliableEvent from './DashboardFrame/AvaliableEvent/LoadingAvaliableEvent';
 
 export default function DashboardPage() {
   const { profile } = useContext(ProfileContext) as ProfileContextProps;
@@ -18,13 +18,13 @@ export default function DashboardPage() {
   }, [profile, router]);
 
   return (
-    <BackgroundDiv>
-      <Frame>
-        <h1>{'Nome: ' + profile?.username}</h1>
-        {typeof profile != 'undefined' ? (
-          <Avatar profile={profile as User} />
-        ) : null}
-      </Frame>
-    </BackgroundDiv>
+    <>
+      <Suspense fallback={<LoadingAssignedEvents />}>
+        <AssignedEvents />
+      </Suspense>
+      <Suspense fallback={<LoadingAvaliableEvent />}>
+        <AvaliableEvents />
+      </Suspense>
+    </>
   );
 }
