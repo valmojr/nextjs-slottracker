@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import AssignedEvents from './DashboardFrame/AssignedEvents/AssignedEvents';
 import AvaliableEvents from './DashboardFrame/AvaliableEvent/AvaliableEvent';
 import LoadingAssignedEvents from './DashboardFrame/AssignedEvents/LoadingAssignedEvents';
-import LoadingAvaliableEvent from './DashboardFrame/AvaliableEvent/LoadingAvaliableEvent';
+import LoadingAvaliableEvents from './DashboardFrame/AvaliableEvent/LoadingAvaliableEvents';
 
 export default function DashboardPage() {
   const { profile } = useContext(ProfileContext) as ProfileContextProps;
@@ -22,7 +22,7 @@ export default function DashboardPage() {
       <Suspense fallback={<LoadingAssignedEvents />}>
         <AssignedEvents />
       </Suspense>
-      <Suspense fallback={<LoadingAvaliableEvent />}>
+      <Suspense fallback={<LoadingAvaliableEvents />}>
         <AvaliableEvents />
       </Suspense>
     </>
