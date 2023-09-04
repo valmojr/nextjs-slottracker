@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="flex max-h-screen h-screen flex-col items-center justify-center p-0 overflow-hidden"
+      className="flex h-screen flex-col flex-nowrap items-center justify-start p-0"
     >
       <ProfileProvider>
         <body className={inter.className}>{children}</body>
