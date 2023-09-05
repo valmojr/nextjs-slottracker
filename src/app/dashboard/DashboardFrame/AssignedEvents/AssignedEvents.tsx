@@ -1,13 +1,11 @@
-import { Guild } from '@/app/Util/types/entity';
-import { ComponentProps } from 'react';
+import Frame from '@/app/Util/Components/Divs/Frame';
+import { Event } from '@/app/Util/types/entity';
 
 export default async function AssignedEvents() {
-  const guilds = await Promise.all([setTimeout(() => null, 5000)]);
-  const events = await Promise.all([setTimeout(() => null, 5000)]);
-
+  const assignedEvents: Event[] = [];
   return (
-    <div>
+    <Frame color="primary" type="main">
       <p>AssignedEvents</p>
-    </div>
+    </Frame>
   );
 }

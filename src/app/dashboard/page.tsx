@@ -6,6 +6,7 @@ import AssignedEvents from './DashboardFrame/AssignedEvents/AssignedEvents';
 import AvaliableEvents from './DashboardFrame/AvaliableEvent/AvaliableEvent';
 import LoadingAssignedEvents from './DashboardFrame/AssignedEvents/LoadingAssignedEvents';
 import LoadingAvaliableEvents from './DashboardFrame/AvaliableEvent/LoadingAvaliableEvents';
+import TopMenu from './DashboardFrame/TopMenu/TopMenu';
 
 export default function DashboardPage() {
   const { profile } = useContext(ProfileContext) as ProfileContextProps;
@@ -19,6 +20,7 @@ export default function DashboardPage() {
 
   return (
     <>
+      <TopMenu />
       <Suspense fallback={<LoadingAssignedEvents />}>
         <AssignedEvents />
       </Suspense>

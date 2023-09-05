@@ -1,57 +1,41 @@
-import { motion } from 'framer-motion';
 import { ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
-import { Blurple, Fuchsia, Green, Red } from '../../JSONs/colors';
 
-const frameoptions = tv({
-  base: 'h-24 w-screen flex flex-col flex-nowrap align-center items-center',
+const tailwindvariants = tv({
+  base: 'w-[95%] my-4 mx-auto rounded-md h-96 min-h-24 flex flex-col flex-nowrap items-center justify-start',
   variants: {
     color: {
-      none: '',
-      primary: `bg-[${Blurple}]`,
-      secondary: `bg-[${Fuchsia}]`,
-      danger: `bg-[${Red}]`,
-      success: `bg-[${Green}]`,
+      primary: `bg-DarkLighten`,
+      secondary: 'bg-DarkDarken',
+      alternativePrimary: `bg-DarkLightest`,
+      alternativeSecondary: `bg-DarkDarkest`,
     },
-    size: {
-      container: '',
-      bar: '',
+    type: {
+      main: 'h-72',
+      alternative: 'min-h-24 h-fit',
+      top: 'h-16 mt-0 w-screen rounded-none flex-row justify-center px-2 py-2',
+      bottom: '',
     },
-  },
-  defaultVariants: {
-    color: 'none',
-    size: 'container',
   },
 });
 
 export default function Frame({
   children,
   className,
-  backgroundColor,
-  height,
-}: ComponentProps<'div'> & { backgroundColor?: string; height?: string }) {
-  backgroundColor ? backgroundColor : 'red';
-  height ? height : '300px';
-
+  color,
+  type,
+}: ComponentProps<'div'> & {
+  color:
+    | 'primary'
+    | 'secondary'
+    | 'alternativePrimary'
+    | 'alternativeSecondary';
+  type: 'main' | 'alternative' | 'top' | 'bottom';
+}) {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        height: 0,
-        backgroundColor: 'transparent',
-      }}
-      animate={{
-        opacity: 1,
-        height,
-        backgroundColor,
-      }}
-      whileHover={{
-        scale: 1.1,
-      }}
-      className={twMerge(frameoptions(), className)}
-    >
+    <div className={twMerge(tailwindvariants({ color, type }), className)}>
       {children}
-    </motion.div>
+    </div>
   );
 }

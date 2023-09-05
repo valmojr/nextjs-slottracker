@@ -1,3 +1,9 @@
+import Frame from '@/app/Util/Components/Divs/Frame';
+
 export default function LoadingAvaliableEvents() {
-  return <p>Loading Assigned Events</p>;
+  return (
+    <Frame type="main" color="alternativePrimary">
+      <p>Loading AvaliableEvents</p>
+    </Frame>
+  );
 }
