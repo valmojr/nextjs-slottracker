@@ -10,11 +10,11 @@ const AvatarVariables = tv({
   variants: {
     border: {
       squaredSmall: 'rounded-none h-8 w-8',
-      squaredLarge: 'rounded-none h-16 w-16',
+      squaredLarge: 'rounded-none h-12 w-12',
       roundedSmall: 'rounded-xl h-8 w-8',
-      roundedLarge: 'rounded-xl h-16 w-16',
+      roundedLarge: 'rounded-xl h-12 w-12',
       circledSmall: 'rounded-full h-8 w-8',
-      circledLarge: 'rounded-full h-16 w-16',
+      circledLarge: 'rounded-full h-12 w-12',
     },
   },
 });

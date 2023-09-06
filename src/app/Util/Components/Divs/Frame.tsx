@@ -14,7 +14,7 @@ const tailwindvariants = tv({
     type: {
       main: 'h-72',
       alternative: 'min-h-24 h-fit',
-      top: 'h-16 mt-0 w-screen rounded-none flex-row justify-center px-2 py-2',
+      top: 'h-16 mt-0 w-screen rounded-none flex-row justify-between px-3',
       bottom: '',
     },
   },
