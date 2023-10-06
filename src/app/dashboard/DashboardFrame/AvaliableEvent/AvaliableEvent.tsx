@@ -5,7 +5,7 @@ export default async function AvaliableEvents({profile}: {profile: User | undefi
   const response = await fetch(`${process.env.BACKEND_API_URL}/event/guildEvents/${profile?.id}`);
   const assignedEvents: Event[] = await response.json();
   if (!profile) {
-    <p>Error!</p>
+    <p>Error fetching profile assigned events</p>
   } else {
   return (
     <Frame color="primary" type="alternative">
