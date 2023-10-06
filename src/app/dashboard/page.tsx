@@ -22,10 +22,10 @@ export default function DashboardPage() {
     <>
       <TopMenu />
       <Suspense fallback={<LoadingAssignedEvents />}>
-        <AssignedEvents />
+        <AssignedEvents profile={ profile } />
       </Suspense>
       <Suspense fallback={<LoadingAvaliableEvents />}>
-        <AvaliableEvents />
+        <AvaliableEvents profile={profile} />
       </Suspense>
     </>
   );
