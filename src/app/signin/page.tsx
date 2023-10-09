@@ -1,8 +1,7 @@
 'use client';
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { redirect } from 'next/navigation';
-import { User } from '../Util/types/entity';
 import CookieHandler from '../Util/functions/cookieHandler';
 import { useRouter } from 'next/navigation';
 import fetchProfile from '../Util/functions/fetchProfile';
