@@ -6,7 +6,8 @@ import AssignedEvents from './DashboardFrame/AssignedEvents/AssignedEvents';
 import AvaliableEvents from './DashboardFrame/AvaliableEvent/AvaliableEvent';
 import LoadingAssignedEvents from './DashboardFrame/AssignedEvents/LoadingAssignedEvents';
 import LoadingAvaliableEvents from './DashboardFrame/AvaliableEvent/LoadingAvaliableEvents';
-import TopMenu from './DashboardFrame/TopMenu/TopMenu';
+import { Dialog, Flex, Button, Text, TextField } from '@radix-ui/themes';
+import CreateEvent from './createEvent';
 
 export default function DashboardPage() {
   const { profile } = useContext(ProfileContext) as ProfileContextProps;
@@ -18,15 +19,13 @@ export default function DashboardPage() {
     }
   }, [profile, router]);
 
-  return (
-    <>
-      <TopMenu />
-      <Suspense fallback={<LoadingAssignedEvents />}>
-        <AssignedEvents profile={ profile } />
-      </Suspense>
-      <Suspense fallback={<LoadingAvaliableEvents />}>
-        <AvaliableEvents profile={profile} />
-      </Suspense>
-    </>
-  );
+  return <Dialog.Root>
+    <Suspense fallback={<LoadingAssignedEvents />}>
+      <AssignedEvents profile={ profile } />
+    </Suspense>
+    <Suspense fallback={<LoadingAvaliableEvents />}>
+      <AvaliableEvents profile={profile} />
+    </Suspense>
+    <CreateEvent/>
+    </Dialog.Root>
 }
