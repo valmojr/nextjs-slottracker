@@ -14,7 +14,7 @@ const tailwindvariants = tv({
     type: {
       main: 'h-72',
       alternative: 'min-h-24 h-fit',
-      top: 'h-16 mt-0 w-screen rounded-none flex-row justify-center px-2 py-2',
+      top: 'h-16 mt-0 w-screen rounded-none flex-row px-4 py-2',
       bottom: '',
     },
   },
@@ -34,7 +34,7 @@ export default function Frame({
   type: 'main' | 'alternative' | 'top' | 'bottom';
 }) {
   return (
-    <div className={twMerge(tailwindvariants({ color, type }), className)}>
+    <div className={twMerge(tailwindvariants({ color, type }), className, 'justify-between')}>
       {children}
     </div>
   );
