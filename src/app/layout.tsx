@@ -3,6 +3,8 @@ import '@radix-ui/themes/styles.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import ProfileProvider from './context/Context';
+import { Theme } from '@radix-ui/themes';
+import { twMerge } from 'tailwind-merge';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -16,12 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
+    <html  suppressHydrationWarning
       lang="en"
-      className="flex h-screen flex-col flex-nowrap items-center justify-start p-0"
+      className="flex h-screen flex-col flex-nowrap items-center justify-start p-0 bg-DarkDarkest"
     >
       <ProfileProvider>
-        <body className={inter.className}>{children}</body>
+        <Theme appearance="dark">
+          <body className={twMerge(inter.className, 'bg-DarkDarkest flex flex-col w-full h-full items-center justify-start')}>
+              {children}
+          </body>
+        </Theme>
       </ProfileProvider>
     </html>
   );

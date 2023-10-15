@@ -24,7 +24,7 @@ export default function TopMenu() {
     <Frame type="top" color="primary">
       <Avatar profile={profile} border={'circled'} size={'md'} />
       <h1 className="text-2xl">{profile?.username}</h1>
-      <Icon icon={<ExitIcon/>} border={'circledMedium'} onClick={()=>handleLogout()}/>
+      <Icon icon={<ExitIcon/>} border={'circledMedium'} color={'red'} onClick={()=>handleLogout()}/>
     </Frame>
   );
 }
