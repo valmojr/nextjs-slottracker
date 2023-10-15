@@ -1,65 +1,51 @@
-'use client';
-import { ComponentProps } from 'react';
+import { IconProps } from '@radix-ui/react-icons/dist/types';
+import { ComponentProps, ReactElement } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
-import { EnterIcon, ExitIcon } from '@radix-ui/react-icons';
 
 const IconVariables = tv({
-  base: 'rounded-full flex flex-row flex-nowrap justify-center items-center',
+  base: 'flex flex-row items-center justify-center',
   variants: {
-    size: {
-      small: 'w-12 h-12',
-      large: 'w-16 h-16',
-    },
-    type: {
-      icon: 'cursor-none',
-      buttom: 'cursor-pointer',
+    border: {
+      squaredSmall: 'rounded-none h-8 w-8',
+      squaredLarge: 'rounded-none h-16 w-16',
+      roundedSmall: 'rounded-xl h-8 w-8',
+      roundedLarge: 'rounded-xl h-16 w-16',
+      circledSmall: 'rounded-full h-8 w-8',
+      circledMedium: 'rounded-full h-12 w-12',
+      circledLarge: 'rounded-full h-16 w-16',
     },
     color: {
-      dark: 'bg-DarkDarken hover:bg-DarkDarkest',
-      darker: 'bg-DarkDarkest hover:bg-DarkDarken',
-      light: 'bg-DarkLighten',
-      lighter: 'bg-DarkLightest',
-      red: 'bg-Red',
-      yellow: 'bg-Yellow',
-      blurple: 'bg-Blurpe',
-    },
+      black: 'bg-black',
+      white: 'bg-white',
+      grey: 'bg-grey-600',
+      red: 'bg-red-600',
+      green: 'bg-emerald-600',
+      blue: 'bg-blue-500',
+    }
   },
 });
 
-export const FetchIcon = (radixIcon: 'logout' | 'login') => {
-  switch (radixIcon) {
-    case 'logout':
-      return <ExitIcon />;
-    case 'login':
-      return <EnterIcon />;
-  }
-};
-
 export default function Icon({
-  className,
-  clickCallback,
-  type,
   icon,
-  size,
+  className,
+  border,
   color,
-}: ComponentProps<'div'> & {
-  type: 'icon' | 'buttom';
-  size: 'small' | 'large';
-  color: 'dark' | 'darker' | 'light' | 'lighter' | 'red' | 'yellow' | 'blurple';
-  icon: 'logout' | 'login';
-  clickCallback: () => void;
-}) {
-  return (
-    <div
-      className={twMerge(
-        IconVariables({ type, size, color }),
-        className,
-        'cursor-pointer',
-      )}
-      onClick={clickCallback}
-    >
-      {FetchIcon(icon)}
-    </div>
-  );
+}: ComponentProps<'img'> & {
+  icon: ReactElement<any, any>;
+  border?:
+    | 'squaredSmall'
+    | 'squaredLarge'
+    | 'roundedSmall'
+    | 'roundedLarge'
+    | 'circledSmall'
+    | 'circledMedium'
+    | 'circledLarge';
+    color?: "black" | "white" | "grey" | "red" | "green" | "blue";
+  }): JSX.Element {
+    return (
+        <div
+          className={twMerge(IconVariables({ border, color }), className)}
+        >{icon}</div>
+    )
 }

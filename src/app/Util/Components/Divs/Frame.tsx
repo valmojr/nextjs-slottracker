@@ -34,7 +34,7 @@ export default function Frame({
   type: 'main' | 'alternative' | 'top' | 'bottom';
 }) {
   return (
-    <div className={twMerge(tailwindvariants({ color, type }), className)}>
+    <div className={twMerge(tailwindvariants({ color, type }), className, 'justify-between')}>
       {children}
     </div>
   );

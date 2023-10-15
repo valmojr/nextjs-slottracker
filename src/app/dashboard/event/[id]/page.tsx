@@ -1,4 +1,3 @@
-import BackgroundDiv from '@/app/Util/Components/Divs/BackgroundDiv';
 import { Suspense } from 'react';
 
 interface EventPageProps {
@@ -12,9 +11,7 @@ export default function EventPage({ params }: EventPageProps) {
 
   return (
     <Suspense fallback={<p>Carrendo em suspense</p>}>
-      <BackgroundDiv>
         <h1>Event id: {id}</h1>
-      </BackgroundDiv>
     </Suspense>
   );
 }
