@@ -23,11 +23,9 @@ export default function RootLayout({
       className="flex h-screen flex-col flex-nowrap items-center justify-start p-0 bg-DarkDarkest"
     >
       <ProfileProvider>
-        <Theme appearance="dark">
-          <body className={twMerge(inter.className, 'bg-DarkDarkest flex flex-col w-full h-full items-center justify-start')}>
+          <body className={twMerge(inter.className, 'bg-white flex flex-col w-full h-full items-center justify-start')}>
               {children}
           </body>
-        </Theme>
       </ProfileProvider>
     </html>
   );
